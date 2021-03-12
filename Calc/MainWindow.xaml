@@ -12,6 +12,15 @@
         Background="LightGray" 
         Icon="/icon.png">
 
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FF85B1C1"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Padding" Value="5"/>
+            <EventSetter Event="Click" Handler="ButtonClick"/>
+        </Style>
+    </Window.Resources>
+    
     <Border Padding="10 0 10 10">
 
         <StackPanel>
@@ -57,30 +66,30 @@
                 </Grid.RowDefinitions>
 
                 <!-- 7 8 9 C CE -->
-                <Button x:Name="Button7" Click="ButtonClick" Grid.Row="0" Grid.Column="0" Padding="5" Margin="2" Content="7" Background="#FF85B1C1"/>
-                <Button x:Name="Button8" Click="ButtonClick" Grid.Row="0" Grid.Column="1" Padding="5" Margin="2" Content="8" Background="#FF85B1C1"/>
-                <Button x:Name="Button9" Click="ButtonClick" Grid.Row="0" Grid.Column="2" Padding="5" Margin="2" Content="9" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonC" Click="ButtonClick" Grid.Row="0" Grid.Column="3" Padding="5" Margin="2" Content="C" Background="#FFF56868"/>
-                <Button x:Name="ButtonCE" Click="ButtonClick" Grid.Row="0" Grid.Column="4" Padding="5" Margin="2" Content="CE" Background="#FFF56868"/>
+                <Button x:Name="Button7" Grid.Row="0" Grid.Column="0" Content="7"/>
+                <Button x:Name="Button8" Grid.Row="0" Grid.Column="1" Content="8"/>
+                <Button x:Name="Button9" Grid.Row="0" Grid.Column="2" Content="9"/>
+                <Button x:Name="ButtonC" Grid.Row="0" Grid.Column="3" Content="C" Background="#FFF56868"/>
+                <Button x:Name="ButtonCE" Grid.Row="0" Grid.Column="4" Content="CE" Background="#FFF56868"/>
 
                 <!-- 4 5 6 * / -->
-                <Button x:Name="Button4" Click="ButtonClick" Grid.Row="1" Grid.Column="0" Padding="5" Margin="2" Content="4" Background="#FF85B1C1"/>
-                <Button x:Name="Button5" Click="ButtonClick" Grid.Row="1" Grid.Column="1" Padding="5" Margin="2" Content="5" Background="#FF85B1C1"/>
-                <Button x:Name="Button6" Click="ButtonClick" Grid.Row="1" Grid.Column="2" Padding="5" Margin="2" Content="6" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonMul" Click="ButtonClick" Grid.Row="1" Grid.Column="3" Padding="5" Margin="2" Content="*" Background="#FFF3B395"/>
-                <Button x:Name="ButtonDiv" Click="ButtonClick" Grid.Row="1" Grid.Column="4" Padding="5" Margin="2" Content="/" Background="#FFF3B395"/>
+                <Button x:Name="Button4" Grid.Row="1" Grid.Column="0" Content="4"/>
+                <Button x:Name="Button5" Grid.Row="1" Grid.Column="1" Content="5"/>
+                <Button x:Name="Button6" Grid.Row="1" Grid.Column="2" Content="6"/>
+                <Button x:Name="ButtonMul" Grid.Row="1" Grid.Column="3" Content="*" Background="#FFF3B395"/>
+                <Button x:Name="ButtonDiv" Grid.Row="1" Grid.Column="4" Content="/" Background="#FFF3B395"/>
 
                 <!-- 1 2 3 + - -->
-                <Button x:Name="Button1" Click="ButtonClick" Grid.Row="2" Grid.Column="0" Padding="5" Margin="2" Content="1" Background="#FF85B1C1"/>
-                <Button x:Name="Button2" Click="ButtonClick" Grid.Row="2" Grid.Column="1" Padding="5" Margin="2" Content="2" Background="#FF85B1C1"/>
-                <Button x:Name="Button3" Click="ButtonClick" Grid.Row="2" Grid.Column="2" Padding="5" Margin="2" Content="3" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonPlus" Click="ButtonClick" Grid.Row="2" Grid.Column="3" Padding="5" Margin="2" Content="+" Background="#FFF3B395"/>
-                <Button x:Name="ButtonMinus" Click="ButtonClick" Grid.Row="2" Grid.Column="4" Padding="5" Margin="2" Content="-" Background="#FFF3B395"/>
+                <Button x:Name="Button1" Grid.Row="2" Grid.Column="0" Content="1"/>
+                <Button x:Name="Button2" Grid.Row="2" Grid.Column="1" Content="2"/>
+                <Button x:Name="Button3" Grid.Row="2" Grid.Column="2" Content="3"/>
+                <Button x:Name="ButtonPlus" Grid.Row="2" Grid.Column="3" Content="+" Background="#FFF3B395"/>
+                <Button x:Name="ButtonMinus" Grid.Row="2" Grid.Column="4" Content="-" Background="#FFF3B395"/>
 
                 <!-- 0 , = -->
-                <Button x:Name="Button0" Click="ButtonClick" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Padding="5" Margin="2" Content="0" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonComma" Click="ButtonClick" Grid.Row="3" Grid.Column="2" Padding="5" Margin="2" Content="," Background="#FF85B1C1"/>
-                <Button x:Name="ButtonEq" Click="ButtonClick" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Padding="5" Margin="2" Content="=" Background="#FFF3B395"/>
+                <Button x:Name="Button0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="0"/>
+                <Button x:Name="ButtonComma" Grid.Row="3" Grid.Column="2" Content=","/>
+                <Button x:Name="ButtonEq" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Content="=" Background="#FFF3B395"/>
             </Grid>
 
 
@@ -101,20 +110,20 @@
                 </Grid.RowDefinitions>
 
                 <!-- Pow Sqrt Ln Log -->
-                <Button x:Name="ButtonPow" Grid.Row="0" Grid.Column="0" Padding="5" Margin="2" Content="^" ToolTip="Potencia" Click="ButtonClick" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonSqrt" Grid.Row="0" Grid.Column="1" Padding="5" Margin="2" Content="Sqrt" ToolTip="Raíz cuadrada" Click="ButtonClick" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonMod" Grid.Row="0" Grid.Column="2" Padding="5" Margin="2" Content="%" ToolTip="Resto" Click="ButtonClick" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonFact" Grid.Row="0" Grid.Column="3" Padding="5" Margin="2" Content="!" ToolTip="Factorial" Click="ButtonClick" Background="#FF85B1C1"/>
+                <Button x:Name="ButtonPow" Grid.Row="0" Grid.Column="0" Content="^" ToolTip="Potencia"/>
+                <Button x:Name="ButtonSqrt" Grid.Row="0" Grid.Column="1" Content="Sqrt" ToolTip="Raíz cuadrada"/>
+                <Button x:Name="ButtonMod" Grid.Row="0" Grid.Column="2" Content="%" ToolTip="Resto"/>
+                <Button x:Name="ButtonFact" Grid.Row="0" Grid.Column="3" Content="!" ToolTip="Factorial"/>
 
                 <!-- Sen Cos Tan Pi -->
-                <Button x:Name="ButtonLog" Grid.Row="1" Grid.Column="0" Padding="5" Margin="2" Content="Log" ToolTip="Logaritmo en base 10" Click="ButtonClick" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonSen" Grid.Row="1" Grid.Column="1" Padding="5" Margin="2" Content="Sen" ToolTip="Seno" Click="ButtonClick" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonCos" Grid.Row="1" Grid.Column="2" Padding="5" Margin="2" Content="Cos" ToolTip="Coseno" Click="ButtonClick" Background="#FF85B1C1"/>
-                <Button x:Name="ButtonTan" Grid.Row="1" Grid.Column="3" Padding="5" Margin="2" Content="Tan" ToolTip="Tangente" Click="ButtonClick" Background="#FF85B1C1"/>
+                <Button x:Name="ButtonLog" Grid.Row="1" Grid.Column="0" Content="Log" ToolTip="Logaritmo en base 10"/>
+                <Button x:Name="ButtonSen" Grid.Row="1" Grid.Column="1" Content="Sen" ToolTip="Seno"/>
+                <Button x:Name="ButtonCos" Grid.Row="1" Grid.Column="2" Content="Cos" ToolTip="Coseno"/>
+                <Button x:Name="ButtonTan" Grid.Row="1" Grid.Column="3" Content="Tan" ToolTip="Tangente"/>
 
                 <!-- Binario Hexadecimal -->
-                <Button x:Name="ButtonBin" Grid.Row="2" Grid.Column="0" Padding="5" Margin="2" Grid.ColumnSpan="4" Content="Convertir a binario" ToolTip="Convertir el número en pantalla a binario" Click="ButtonConvertClick" Background="#FFF3B395"/>
-                <Button x:Name="ButtonHex" Grid.Row="3" Grid.Column="0" Padding="5" Margin="2" Grid.ColumnSpan="4" Content="Convertir a hexadecimal" ToolTip="Convertir el número en pantalla a hexadecimal" Click="ButtonConvertClick" Background="#FFF3B395"/>
+                <Button x:Name="ButtonBin" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Content="Convertir a binario" ToolTip="Convertir el número en pantalla a binario" Click="ButtonConvertClick" Background="#FFF3B395"/>
+                <Button x:Name="ButtonHex" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Content="Convertir a hexadecimal" ToolTip="Convertir el número en pantalla a hexadecimal" Click="ButtonConvertClick" Background="#FFF3B395"/>
             </Grid>
 
         </StackPanel>
