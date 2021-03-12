@@ -13,10 +13,12 @@
         Icon="/icon.png">
 
     <Window.Resources>
+        <!-- Propiedades por defecto de los botones -->
         <Style TargetType="Button">
             <Setter Property="Background" Value="#FF85B1C1"/>
             <Setter Property="Margin" Value="2"/>
             <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
             <EventSetter Event="Click" Handler="ButtonClick"/>
         </Style>
     </Window.Resources>
@@ -46,6 +48,7 @@
                      HorizontalContentAlignment="Right"
                      IsReadOnly="True" 
                      FlowDirection="LeftToRight"
+                     FontSize="14"
                      Background="AliceBlue"/>
 
             <!-- Modo básico -->

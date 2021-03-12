@@ -1,24 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calc
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         // Constructor
@@ -79,7 +65,7 @@ namespace Calc
         // Menu
         private void SalirMenuItemClick(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result =  MessageBox.Show("¿Seguro que quiere salir?", "Atención", MessageBoxButton.YesNo);
+            MessageBoxResult result = MessageBox.Show("¿Seguro que quiere salir?", "Atención", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
             if (result == MessageBoxResult.Yes)
             {
@@ -107,16 +93,16 @@ namespace Calc
         private bool IsOperator(string possibleOperator)
         {
             return possibleOperator == "+" || possibleOperator == "-" || possibleOperator == "*" ||
-                possibleOperator == "/" || possibleOperator == "^" || possibleOperator == "Sqrt" || 
+                possibleOperator == "/" || possibleOperator == "^" || possibleOperator == "Sqrt" ||
                 possibleOperator == "%" || possibleOperator == "!" || possibleOperator == "Log" ||
                 possibleOperator == "Sen" || possibleOperator == "Cos" || possibleOperator == "Tan";
         }
 
         private bool ContainsOtherOperators(string screenContent)
         {
-            return screenContent.Contains("+") || screenContent.Contains("-") || screenContent.Contains("*") || 
+            return screenContent.Contains("+") || screenContent.Contains("-") || screenContent.Contains("*") ||
                 screenContent.Contains("/") || screenContent.Contains("^") || screenContent.Contains("Sqrt") ||
-                screenContent.Contains("%") || screenContent.Contains("!") || screenContent.Contains("Log") || 
+                screenContent.Contains("%") || screenContent.Contains("!") || screenContent.Contains("Log") ||
                 screenContent.Contains("Sen") || screenContent.Contains("Cos") || screenContent.Contains("Tan");
         }
 
@@ -326,17 +312,6 @@ namespace Calc
 
             double.TryParse(number, out double n);
 
-            // Iterativo usando while
-            //double result = 1;
-
-            //while (number != 1)
-            //{
-            //    result *= number;
-            //    number--;
-            //}
-
-            //return result;
-
             // Iterativo usando for
             double result = 1;
 
@@ -402,19 +377,6 @@ namespace Calc
         {
             // Si el número es con coma, se descarta la parte decimal
             return Convert.ToString(number, 2);
-
-            //// Manual
-            //int resto;
-            //string resultado = String.Empty;
-
-            //while (number > 0)
-            //{
-            //    resto = number % 2;
-            //    number /= 2;
-            //    resultado = resto.ToString() + resultado; // Agregamos los números en orden inverso.
-            //}
-
-            //return resultado;
         }
 
         private string ConvertToHex(int number)
